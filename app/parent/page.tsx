@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function ParentPlaceholder(){return <main className="placeholder"><div className="box"><div className="eyebrow">PARENT PORTAL</div><h1>Welcome to the Parent Portal</h1><p>You are authenticated successfully. The school portal dashboard will be introduced here in a future release.</p><Link href="/" className="btn" style={{background:'#761f36',color:'#fff'}}>RETURN TO WEBSITE</Link></div></main>}
