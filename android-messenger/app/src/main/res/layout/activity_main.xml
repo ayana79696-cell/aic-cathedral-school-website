@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical" android:padding="24dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <TextView android:text="AIC School Messenger" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="#7A1F2B" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="School phone SMS bridge" android:textSize="15sp"
+            android:layout_marginTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/statusText" android:text="Not connected"
+            android:textSize="16sp" android:layout_marginTop="20dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/tokenInput" android:hint="Device token" android:inputType="textPassword"
+            android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/saveTokenButton" android:text="Save & Test Connection"
+            android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/broadcastText" android:text="No pending broadcast"
+            android:textSize="16sp" android:layout_marginTop="24dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+            android:visibility="gone" android:layout_marginTop="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/checkButton" android:text="Check for SMS"
+            android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/sendButton" android:text="Send Pending SMS"
+            android:enabled="false" android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/logText" android:text="" android:textSize="13sp"
+            android:layout_marginTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
