@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'android-messenger/**'
+      - '.github/workflows/build-aic-school-messenger.yml'
 
 jobs:
   build:
@@ -19,8 +20,13 @@ jobs:
         with:
           gradle-version: '8.7'
       - uses: android-actions/setup-android@v3
-      - run: gradle -p android-messenger :app:assembleDebug
-      - uses: actions/upload-artifact@v4
+      - name: Install Android SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+      - name: Build debug APK
+        run: gradle -p android-messenger :app:assembleDebug --stacktrace
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: aic-school-messenger-debug-apk
           path: android-messenger/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
