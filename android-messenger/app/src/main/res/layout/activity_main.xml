@@ -18,7 +18,7 @@
         <EditText android:id="@+id/tokenInput" android:hint="Device token" android:inputType="textPassword"
             android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <Button android:id="@+id/saveTokenButton" android:text="Save & Test Connection"
+        <Button android:id="@+id/saveTokenButton" android:text="Save &amp; Test Connection"
             android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
         <TextView android:id="@+id/broadcastText" android:text="No pending broadcast"
