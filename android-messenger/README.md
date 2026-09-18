@@ -16,3 +16,6 @@ The first version intentionally limits each ERP broadcast to 50 recipients. It i
 
 
 Build pipeline refreshed for the school test.
+
+
+Rebuild pipeline updated to use the GitHub-hosted Android SDK.
